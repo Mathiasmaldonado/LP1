@@ -1,6 +1,6 @@
 const comillaSimple ='comilla simple';
 const comillaDoble ="comilla doble";
-
+const soyunenter = "soy un \nenter";
 //template string
 const tmp = `vamos a construir un parrafo usando las otras 
 ya definidas. Estas son ${comillaSimple} y ${comillaDoble}
@@ -11,3 +11,4 @@ ya definidas. Estas son ${comillaSimple} y ${comillaDoble}
 
  console.log(tmp);
  console.log(practica1);
+ console.log(soyunenter);
