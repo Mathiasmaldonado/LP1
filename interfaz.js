@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", function() {
         overlay.style.zIndex = "1000";
 
         const imagen = document.createElement("img");
-  imagen.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_zc0loOAUf2qp9G_vulXGQUKXCA6pTdJEug&s";
+  imagen.src = "Captura de pantalla 2025-02-20 180714.png";
   imagen.alt = "Cargando...";
-  imagen.style.maxWidth = "1500px"; // Ajusta el tamaño de la imagen posd: no se puede agrandar mas :(
+  imagen.style.maxWidth = "700px"; // Ajusta el tamaño de la imagen
 
         // Agregar la imagen al overlay
         overlay.appendChild(imagen);
@@ -73,8 +73,40 @@ document.addEventListener("DOMContentLoaded", function() {
     crearBoton("boton2", "Cargar", "black", function() {
       console.log("Botón 2 clic");
       // Aquí agrega la función personalizada para el Botón 2
-      window.location.href = "https://i.ytimg.com/vi/HQyhmFimhlM/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgWShNMA8=&rs=AOn4CLBRIPuHL4kZmiR0q8zKvmMIk9fCQg"
-    
+      const sonido= new Audio("welcome.mp3");
+      sonido.play().catch(error => {
+        console.error("no se pudo reproducir el sonido", error);
+      })
+      
+      const overlay = document.createElement("div");
+      overlay.style.position = "fixed";
+      overlay.style.top = "0";
+      overlay.style.left = "0";
+      overlay.style.width = "100%";
+      overlay.style.height = "100%";
+      overlay.style.backgroundColor = "black";
+      overlay.style.display = "flex";
+      overlay.style.justifyContent = "center";
+      overlay.style.alignItems = "center";
+      overlay.style.zIndex = "1000";
+
+      const imagen = document.createElement("img");
+imagen.src = "Captura de pantalla 2025-02-20 181340.png";
+imagen.style.maxWidth = "700px";
+
+      // Agregar la imagen al overlay
+      overlay.appendChild(imagen);
+      
+      
+      // Agregar el overlay al body
+      document.body.appendChild(overlay);
+      
+      document.addEventListener("keyup", function(e) {
+        if (e.key === "Escape") {
+          // Vuelve al inicio recargando la página LOKURAAA
+          window.location.reload();
+        }
+      });
     });
   
     // Botón 3 para los marcadores
@@ -93,9 +125,40 @@ document.addEventListener("DOMContentLoaded", function() {
     crearBoton("boton5", "Extras", "black", function() {
       console.log("Botón 5 clic");
       // Aquí agrega la función personalizada para el Botón 5.
+      const sonido= new Audio("disparo-directo.mp3");
+      sonido.play().catch(error => {
+        console.error("no se pudo reproducir el sonido", error);
+      })
+      
+      const overlay = document.createElement("div");
+      overlay.style.position = "fixed";
+      overlay.style.top = "0";
+      overlay.style.left = "0";
+      overlay.style.width = "100%";
+      overlay.style.height = "100%";
+      overlay.style.backgroundColor = "black";
+      overlay.style.display = "flex";
+      overlay.style.justifyContent = "center";
+      overlay.style.alignItems = "center";
+      overlay.style.zIndex = "1000";
+
       const imagen = document.createElement("img");
-      window.location.href = "https://cloudfront-eu-central-1.images.arcpublishing.com/diarioas/NTD3CQLJJREKHIMDIIQMFTLXME.png"
+imagen.src = "Captura de pantalla 2025-02-20 185155.png";
+imagen.style.maxWidth = "650px";
+
+      // Agregar la imagen al overlay
+      overlay.appendChild(imagen);
+      
+      
+      // Agregar el overlay al body
+      document.body.appendChild(overlay);
   
+      document.addEventListener("keyup", function(e) {
+        if (e.key === "Escape") {
+          // Vuelve al inicio recargando la página LOKURAAA
+          window.location.reload();
+        }
+      });
     });
   
     // Botón 6 creditos
@@ -111,7 +174,8 @@ document.addEventListener("DOMContentLoaded", function() {
     crearBoton("boton7", "Salir", "black", function() {
         console.log("Botón 7 clic");
         // Aquí agrega la función personalizada para el Botón 6.
-        // Ejemplo: window.location.href = "https://ejemplo.com";
+        window.closed();
+        
       });
  
 });
