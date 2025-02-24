@@ -1,0 +1,40 @@
+body {
+    background-image: url(/zoe/nono.jpeg);
+    background-size: cover;
+    color: gray;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 40px;
+}
+.menu {
+    width: 1100px;
+    text-align: center;
+}
+.opcion {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 10px;
+}
+.seleccion {
+    cursor: pointer;
+    color: grey;
+}
+.seleccion:hover {
+    color: gray;
+}
+
+.contenedor-botones {
+    font-size: 100px;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}

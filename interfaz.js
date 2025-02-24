@@ -1,7 +1,7 @@
 // Espera a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function() {
     function crearBoton(id, texto, color, accion) {
-      const boton = document.createElement("button");
+      const boton = document.createElement("button");//cosas que no uso pero las agg por las dudas
       boton.id = id;
       boton.textContent = texto;
       boton.style.backgroundColor = color;
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Después de 3 segundos, redirigir a la página
         setTimeout(function() {
-          window.location.href = "http://127.0.0.1:5500/interfaz.html"; //destino
+          window.location.href = ""; //destino
         }, 5000);
       });
       
@@ -119,6 +119,7 @@ imagen.style.maxWidth = "700px";
     crearBoton("boton4", "Ayuda y Opciones", "black", function() {
       console.log("Botón 4 clic");
       // Aquí agrega la función personalizada para el Botón 4.
+      window.location.href= "http://127.0.0.1:5500/zoe/index.html"
     });
   
     // Botón 5  extras
