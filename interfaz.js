@@ -113,6 +113,31 @@ imagen.style.maxWidth = "700px";
     crearBoton("boton3", "Marcadores", "black", function() {
       console.log("Botón 3 clic");
       // Aquí agrega la función personalizada para el Botón 3.
+      let mensajeDiv = document.getElementById("mensaje");
+      if (!mensajeDiv){
+        mensajeDiv = document.createElement("div");
+        mensajeDiv.id= "mensaje";
+        mensajeDiv.style.position = "fixed";
+      mensajeDiv.style.bottom = "10px";
+      mensajeDiv.style.left = "50%";
+      mensajeDiv.style.transform = "translateX(-50%)";
+      mensajeDiv.style.backgroundColor = "black";
+      mensajeDiv.style.padding = "10px 10px";
+      mensajeDiv.style.borderRadius = "5px";
+      mensajeDiv.style.boxShadow = "0 0 10px rgba(255, 255, 255, 0.2)";
+      mensajeDiv.style.fontFamily = "Arial, sans-serif";
+      mensajeDiv.style.textAlign = "center";
+      mensajeDiv.style.color = "white"
+
+      document.body.appendChild(mensajeDiv)
+      }
+      mensajeDiv.textContent = "no conectado a internet"
+
+      setTimeout(function(){
+        if (mensajeDiv){
+          mensajeDiv.remove();
+        }
+      }, 5000);
     });
   
     // Botón 4 para los ajustes
