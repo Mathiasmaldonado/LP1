@@ -113,7 +113,7 @@ imagen.style.maxWidth = "700px";
     crearBoton("boton3", "Marcadores", "black", function() {
       console.log("Botón 3 clic");
       // Aquí agrega la función personalizada para el Botón 3.
-      let mensajeDiv = document.getElementById("mensaje");
+      let mensajeDiv = document.getElementById("mensaje"); // crear el mensaje parra el boton :)
       if (!mensajeDiv){
         mensajeDiv = document.createElement("div");
         mensajeDiv.id= "mensaje";
